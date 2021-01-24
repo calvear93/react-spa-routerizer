@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2021-02-24
+
+### Added
+
+-   Babel with React preset.
+-   Building mode for create a package distribution.
+
+### Fixed
+
+-   React import modern preset in Babel.
+
 ## [1.0.0] - 2021-02-24
 
 -   Handles declarative JSON routing.

@@ -1,4 +1,4 @@
-# REACT SPA ROUTERIZER
+# [React SPA Routerizer](https://github.com/calvear93/react-spa-routerizer)
 
 React library for application routing (based on React Router) that prevents boilerplate code.
 This library eases routes definitions and routing job.

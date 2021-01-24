@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# published package
+/dist
+
 # misc
 .DS_Store
 
