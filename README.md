@@ -165,7 +165,7 @@ export default [
 
 ## Linting 🧿
 
-Project uses two linters, for code formatting and code styling normalizing.
+Project uses ESLint, for code formatting and code styling normalizing.
 
 -   **eslint**: JavaScript and React linter with Airbnb React base config and some other additions.
 -   **prettier**: optional Prettier config.
@@ -175,7 +175,7 @@ For correct interpretation of linters, is recommended to use [Visual Studio Code
 ## Built with 🛠️
 
 -   [React](https://reactjs.org/)
--   [Redux Router](https://reactrouter.com/) - React most popular routing library.
+-   [React Router](https://reactrouter.com/) - React most popular routing library.
 
 ## License 📄
 
