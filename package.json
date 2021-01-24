@@ -1,11 +1,12 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@calvear/react-spa-routerizer",
   "title": "React SPA Routerizer",
   "description": "React library for application routing (based on React Router) that prevents boilerplate code.",
   "author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
   "license": "GPL3",
   "private": false,
+  "main": "src/index.js",
   "keywords": [
     "react",
     "react-router",
@@ -15,6 +16,13 @@
     "router"
   ],
   "repository": "https://github.com/calvear93/react-spa-routerizer",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "react": "^17.0.1",
     "react-router": "^5.2.0",
