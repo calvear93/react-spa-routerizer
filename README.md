@@ -1,4 +1,4 @@
-# [React SPA Routerizer](https://github.com/calvear93/react-spa-routerizer)
+# React SPA Routerizer
 
 React library for application routing (based on React Router) that prevents boilerplate code.
 This library eases routes definitions and routing job.
@@ -62,8 +62,7 @@ export default function App()
     Layout: LayoutComponent,
     Child: PageComponent,
     payload: {
-        secured: true,
-        header: 'Lista de Pokémons'
+        ...
     }
 }
 ```
@@ -84,7 +83,7 @@ export default function App()
     Layout: LayoutComponent,
     DefaultChild: NotFoundPage,
     payload: {
-        secured: true
+        ...
     },
     routes: [
         ...
