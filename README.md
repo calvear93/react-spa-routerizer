@@ -198,7 +198,7 @@ export default function MainPage()
 
     return (
         <div id='main-page'>
-            <div>{title}</div>
+            <h1>{title}</h1>
         </div>
     );
 }
@@ -221,7 +221,7 @@ For correct interpretation of linters, is recommended to use [Visual Studio Code
 
 ## Built with 🛠️
 
--   [React](https://reactjs.org/)
+-   [React](https://reactjs.org/) - the most fabulous JavaScript framework.
 -   [React Router](https://reactrouter.com/) - React most popular routing library.
 
 ## License 📄
