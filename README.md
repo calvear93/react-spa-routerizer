@@ -4,7 +4,7 @@ React library for application routing (based on React Router) that prevents boil
 This library eases routes definitions and routing job.
 Exposes a generic Router for create base app router, some hooks and a routes service (for breadcrumbs for example).
 
-## Structure 💡
+## Structure 📋
 
 ```bash
 ├── README.md
@@ -32,19 +32,19 @@ Exposes a generic Router for create base app router, some hooks and a routes ser
 -   **route.service.js**: routes handler. Initializes routing. Calculates complete paths for nested routes and data for breadcrumbs.
 -   **index.js**: exports router, hooks and routes handler/service.
 
-## How To Use
+## How To Use 💡
 
 Should be initialized with RouterProvider on App.jsx like:
 ```javascript
 import { RouterProvider, Router } from '@calvear/react-spa-routerizer';
-import AppRouter, { routes } from 'routes';
+import routes from 'routes'; // your routes definition JSON
 
 export default function App()
 {
     return (
         <RouterProvider routes={ routes }>
             <Router
-                loader={ <div>Cargando</div> }
+                loader={ <div>Loading</div> }
                 DefaultChild={ () => <div>Page Not Found</div> }
             />
         </RouterProvider>

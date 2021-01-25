@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "@calvear/react-spa-routerizer",
   "title": "React SPA Routerizer",
   "description": "React library for application routing (based on React Router) that prevents boilerplate code.",
@@ -24,10 +24,10 @@
     "npm": ">=6"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "react-router": ">= 5.1.0",
+    "react-router-dom": ">= 5.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
