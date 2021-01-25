@@ -162,6 +162,54 @@ export default [
 ];
 ```
 
+### Hooks
+
+Library has some hooks for eases route state management.
+
+- **useRoutePayload**: returns current route payload.
+
+For this route definition:
+
+```javascript
+...
+
+export default [
+    {
+        key: 'main-page',
+        title: 'Main Page',
+        path: '/',
+        Child: Pages.Main,
+        payload: {
+            title: 'Main Page'
+        }
+    },
+    ...
+];
+```
+
+We can access to it's payload, at '/' path, as below:
+
+```javascript
+import { useRoutePayload } from '@calvear/react-spa-routerizer';
+
+export default function MainPage()
+{
+    const { title } = useRoutePayload();
+
+    return (
+        <div id='main-page'>
+            <div>{title}</div>
+        </div>
+    );
+}
+```
+
+- **useQueryParams**: returns URL query parameters.
+
+- **useHashValue**: returns URL hash value.
+
+- **useRouteState**: returns current route state, from React Router.
+
 ## Linting 🧿
 
 Project uses ESLint, for code formatting and code styling normalizing.
