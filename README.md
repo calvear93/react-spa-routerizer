@@ -213,7 +213,7 @@ export default function MainPage()
 
 Also, this library exports every hook from 'react-router' - see [React Router Hooks](https://reactrouter.com/web/api/Hooks) for more information.
 
-- **useRouteState**: gives you access to the history instance that you may use to navigate.
+- **useHistory**: gives you access to the history instance that you may use to navigate.
 
 - **useLocation**: returns the location object that represents the current URL.
 
