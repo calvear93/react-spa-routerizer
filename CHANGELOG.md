@@ -2,25 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2021-02-27
+#### Changed
+-   License changed to MIT.
+-   React Router is now a dependency (before was peerDependency) because components and hooks are bypassed, so project does not have to install 'react-router' or 'react-router-dom' as dependency, every component can be imported from this library.
+
+## [1.0.5-alpha.0] - 2021-02-27
+#### Changed
+-   Documentation updates. Changelog file reference in Readme.
+-   [Experimental] React Router is now a dependency (before was peerDependency) because components and hooks are bypassed, so project does not have to install 'react-router' as dependency.
+
 ## [1.0.4] - 2021-02-25
-
-### Changed
-
+#### Changed
 -   Package peer dependencies version.
 
 ## [1.0.3] - 2021-02-24
-
-### Added
-
+#### Added
 -   Babel with React preset.
 -   Building mode for create a package distribution.
-
-### Fixed
-
+#### Fixed
 -   React import modern preset in Babel.
 
 ## [1.0.0] - 2021-02-24
-
 -   Handles declarative JSON routing.
 -   Routing generic component. RouteChild.jsx for render a page with optional
     layout and Router.jsx for rendering boilerplate generalize.
@@ -31,12 +34,8 @@ All notable changes to this project will be documented in this file.
     useRoutePayload.
 
 ## [X.X.X] - yyyy-mm-dd
-
 Here we write upgrading notes for brands. It's a team effort to make them as
 straightforward as possible.
-
-### Added
-
-### Changed
-
-### Fixed
+#### Added
+#### Changed
+#### Fixed

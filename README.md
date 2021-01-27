@@ -22,8 +22,9 @@ Exposes a generic Router for create base app router, some hooks and a routes ser
 │   └── index.js
 ├── package.json
 ├── jsconfig.js
-├── .eslintrc.json # ESLint config
-└── .prettierrc.json # Prettier config
+├── .babelrc
+├── .eslintrc.json
+└── .prettierrc.json
 ```
 
 -   **Router.jsx**: contains generic router logic.
@@ -210,6 +211,16 @@ export default function MainPage()
 
 - **useRouteState**: returns current route state, from React Router.
 
+Also, this library exports every hook from 'react-router' - see [React Router Hooks](https://reactrouter.com/web/api/Hooks) for more information.
+
+- **useRouteState**: gives you access to the history instance that you may use to navigate.
+
+- **useLocation**: returns the location object that represents the current URL.
+
+- **useParams**: useParams returns an object of key/value pairs of URL parameters.
+
+- **useRouteMatch**: attempts to match the current URL in the same way that a <Route> would.
+
 ## Linting 🧿
 
 Project uses ESLint, for code formatting and code styling normalizing.
@@ -219,6 +230,10 @@ Project uses ESLint, for code formatting and code styling normalizing.
 
 For correct interpretation of linters, is recommended to use [Visual Studio Code](https://code.visualstudio.com/) as IDE and install the plugins in .vscode folder at 'extensions.json', as well as use the config provided in 'settings.json'
 
+## Changelog 📄
+
+For last changes see [CHANGELOG.md](CHANGELOG.md) file for details.
+
 ## Built with 🛠️
 
 -   [React](https://reactjs.org/) - the most fabulous JavaScript framework.
@@ -226,7 +241,7 @@ For correct interpretation of linters, is recommended to use [Visual Studio Code
 
 ## License 📄
 
-This project is licensed under the GPL License - see [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) file for details.
 
 ---
 
