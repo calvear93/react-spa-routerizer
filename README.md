@@ -10,7 +10,7 @@ Exposes a generic Router for create base app router, some hooks and a routes ser
 ├── README.md
 ├── LICENCE.md
 ├── CHANGELOG.md
-├── .vscode/ # Visual Studio shared development config
+├── .vscode/ # vscode shared development config
 ├── src/
 │   ├── router/
 │   │   ├── components/
