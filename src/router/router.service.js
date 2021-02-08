@@ -6,7 +6,7 @@
  * @author Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>
  *
  * Created at     : 2020-11-25 10:04:09
- * Last modified  : 2020-11-27 17:53:44
+ * Last modified  : 2021-02-08 17:33:45
  */
 
 export default {
@@ -68,7 +68,12 @@ export default {
                         ...baseRoute,
                         title,
                         path,
-                        ...rest
+                        ...rest,
+                        // payloads merging, child has priority over base
+                        payload: {
+                            ...rest.payload,
+                            ...baseRoute.payload
+                        }
                     });
 
                     this.Breadcrumbs[path] = title;

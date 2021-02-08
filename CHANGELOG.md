@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2021-02-08
+#### Changed
+-   Fixed payload merging. Now child/router payload are correctly merged (child has priority over any parent/router).
+
 ## [1.0.6] - 2021-02-06
 #### Changed
 -   Updated Babel packages.
