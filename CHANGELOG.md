@@ -3,8 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [1.0.7] - 2021-02-08
-#### Changed
--   Fixed payload merging. Now child/router payload are correctly merged (child has priority over any parent/router).
+#### Fixed
+-   Now child/router payload are correctly merged (child has priority over any parent/router).
 
 ## [1.0.6] - 2021-02-06
 #### Changed
@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.5-alpha.0] - 2021-01-27
 #### Changed
 -   Documentation updates. Changelog file reference in Readme.
+#### Added
 -   [Experimental] React Router is now a dependency (before was peerDependency) because components and hooks are bypassed, so project does not have to install 'react-router' as dependency.
 
 ## [1.0.4] - 2021-01-25
