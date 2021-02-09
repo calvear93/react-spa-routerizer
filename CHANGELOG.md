@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.8] - 2021-02-09
+#### Fixed
+-   Fix when no route payload defined.
+
 ## [1.0.7] - 2021-02-08
 #### Fixed
 -   Now child/router payload are correctly merged (child has priority over any parent/router).

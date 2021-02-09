@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "@calvear/react-spa-routerizer",
   "title": "React SPA Routerizer",
   "description": "React library for application routing (based on React Router) that prevents boilerplate code.",
