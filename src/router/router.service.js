@@ -6,7 +6,7 @@
  * @author Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>
  *
  * Created at     : 2020-11-25 10:04:09
- * Last modified  : 2021-02-09 10:09:02
+ * Last modified  : 2021-02-10 11:11:55
  */
 
 export default {
@@ -71,8 +71,8 @@ export default {
                         ...rest,
                         // payloads merging, child has priority over base
                         payload: {
-                            ...rest?.payload,
-                            ...baseRoute?.payload
+                            ...baseRoute?.payload,
+                            ...rest?.payload
                         }
                     });
 
