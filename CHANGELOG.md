@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.10] - 2021-02-18
+-   Changed minimum React version to 16.13.1.
+-   eslint-radar instead of eslint-sonarjs.
+
 ## [1.0.9] - 2021-02-10
 -   Fix payload mergin priority.
 
