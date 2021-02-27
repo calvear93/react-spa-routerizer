@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.11] - 2021-02-27
 -   Enabled sourcemaps for compiled code.
+-   .eslintignore added for build/dist folders.
 -   Updated documentation.
 
 ## [1.0.10] - 2021-02-18
