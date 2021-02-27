@@ -27,11 +27,11 @@ Exposes a generic Router for create base app router, some hooks and a routes ser
 └── .prettierrc.json
 ```
 
--   **Router.jsx**: contains generic router logic.
--   **RouteChild.jsx**: render current route component (a.k.a. page) and updates document (browser tab) title.
--   **route.hook.js**: contains hooks like useRoutePayload for get specific route payload.
--   **route.service.js**: routes handler. Initializes routing. Calculates complete paths for nested routes and data for breadcrumbs.
--   **index.js**: exports router, hooks and routes handler/service.
+- **Router.jsx**: contains generic router logic.
+- **RouteChild.jsx**: render current route component (a.k.a. page) and updates document (browser tab) title.
+- **route.hook.js**: contains hooks like useRoutePayload for get specific route payload.
+- **route.service.js**: routes handler. Initializes routing. Calculates complete paths for nested routes and data for breadcrumbs.
+- **index.js**: exports router, hooks and routes handler/service.
 
 ## How To Use 💡
 
@@ -221,12 +221,114 @@ Also, this library exports every hook from 'react-router' - see [React Router Ho
 
 - **useRouteMatch**: attempts to match the current URL in the same way that a <Route> would.
 
+## Recipes 📖
+
+- Public and Private routes.
+
+```javascript
+// public.routes.js
+import { lazy } from 'react';
+
+const Pages = {
+    Login: lazy(() => import('pages/login')),
+    Unauthorized: lazy(() => import('pages/unauthorized'))
+};
+
+export default [
+    {
+        key: 'login-page',
+        title: 'Sign In',
+        path: '/login',
+        Child: Pages.Login
+    },
+    {
+        key: 'unauthorized-page',
+        title: 'Unauthorized',
+        path: '/403',
+        Child: Pages.Unauthorized
+    }
+];
+```
+
+```javascript
+// private.routes.js
+import { lazy } from 'react';
+
+const Pages = {
+    Main: lazy(() => import('pages/main'))
+};
+
+export default [
+    {
+        key: 'main-page',
+        title: 'Welcome to my app',
+        path: '/',
+        Child: Pages.Main
+    }
+];
+```
+
+```javascript
+// app.routes.js
+import { lazy } from 'react';
+import privateRoutes from 'routes/private.routes';
+import publicRoutes from 'routes/public.routes';
+
+const Layouts = {
+    App: lazy(() => import('layouts/app'))
+};
+
+export default [
+    {
+        key: 'public-router',
+        path: '/',
+        routes: publicRoutes
+    },
+    {
+        key: 'private-router',
+        path: '/',
+        routes: privateRoutes,
+        Layout: Layouts.App,
+        payload: {
+            secured: true
+        }
+    }
+];
+```
+
+```javascript
+// App.router.js
+import { lazy } from 'react';
+import { useRoutePayload, Redirect, Router } from '@calvear/react-spa-routerizer';
+import { useIsAuthenticated } from 'security'; // custom security validation
+
+const DefaultPage = lazy(() => import('pages/not-found'));
+
+export default function AppRouter()
+{
+    const { secured } = useRoutePayload();
+    const { authenticated } = useIsAuthenticated();
+
+    if (!secured && authenticated)
+        return <Redirect to='/' />;
+
+    if (secured && !authenticated)
+        return <Redirect to='/login' />;
+
+    return (
+        <Router DefaultChild={ DefaultPage } />
+    );
+}
+```
+
+You should declare two routes files, and merge them in a main routes file.
+
 ## Linting 🧿
 
 Project uses ESLint, for code formatting and code styling normalizing.
 
--   **eslint**: JavaScript and React linter with Airbnb React base config and some other additions.
--   **prettier**: optional Prettier config.
+- **eslint**: JavaScript and React linter with Airbnb React base config and some other additions.
+- **prettier**: optional Prettier config.
 
 For correct interpretation of linters, is recommended to use [Visual Studio Code](https://code.visualstudio.com/) as IDE and install the plugins in .vscode folder at 'extensions.json', as well as use the config provided in 'settings.json'
 
@@ -236,8 +338,8 @@ For last changes see [CHANGELOG.md](CHANGELOG.md) file for details.
 
 ## Built with 🛠️
 
--   [React](https://reactjs.org/) - the most fabulous JavaScript framework.
--   [React Router](https://reactrouter.com/) - React most popular routing library.
+- [React](https://reactjs.org/) - the most fabulous JavaScript framework.
+- [React Router](https://reactrouter.com/) - React most popular routing library.
 
 ## License 📄
 

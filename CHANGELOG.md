@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.11] - 2021-02-27
+-   Enabled sourcemaps for compiled code.
+-   Updated documentation.
+
 ## [1.0.10] - 2021-02-18
 -   Changed minimum React version to 16.13.1.
 -   eslint-radar instead of eslint-sonarjs.
